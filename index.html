@@ -156,8 +156,13 @@
   .pcard li b{color:var(--ink);font-weight:600}
   .flow-note{text-align:center;background:var(--yellow-pale);border:1px dashed var(--yellow-edge);border-radius:var(--radius);padding:14px 18px;margin:0 0 28px;color:var(--muted);font-size:15px;line-height:1.55}
   .flow-note b{color:var(--ink);font-weight:700}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .step-card{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:20px 18px}
+  .step-card .sn{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--yellow);font-family:var(--serif);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .step-card .st{font-weight:600;font-size:16px;margin-bottom:5px}
+  .step-card .sd{color:var(--muted);font-size:14px;line-height:1.5}
   @media(max-width:760px){
-    .g3,.g2,.agenda ul,.prep{grid-template-columns:1fr}
+    .g3,.g2,.agenda ul,.prep,.steps{grid-template-columns:1fr}
     header.hero h1{font-size:33px}
     h2{font-size:25px}
     nav .links{display:none}
@@ -174,6 +179,7 @@
     <a href="#roles">역할</a>
     <a href="#data">필요 데이터</a>
     <a href="#scope">범위</a>
+    <a href="#next">이후 진행</a>
   </div>
 </div></nav>
 
@@ -196,11 +202,11 @@
   <p class="sec-sub">AI 도구만으로 되는 일이 아닙니다. 기획서 검수 · 콘텐츠 제작 · 업로드, 법규 검수까지 — 반복되는 일은 <b>AI를 다뤄온 VDVIA</b>가 맡습니다. 우정님은 <b>최종 승인</b>만 하시면 됩니다.</p>
 
   <div class="agenda">
-    <div class="lbl">오늘 미팅에서 정할 것</div>
+    <div class="lbl">오늘 미팅 흐름</div>
     <ul>
-      <li><span class="num">1</span>운영 모델 · 역할 분담 합의</li>
-      <li><span class="num">2</span>주력 국가 · 발행 계정 확정</li>
-      <li><span class="num">3</span>필요 데이터 · 계정 권한 위임 범위</li>
+      <li><span class="num">1</span>전체 협업 구조 공유</li>
+      <li><span class="num">2</span>필요 데이터 요청 (6가지)</li>
+      <li><span class="num">3</span>이후 진행 계획 공유</li>
     </ul>
   </div>
 
@@ -395,6 +401,20 @@
       </ul>
     </div>
   </div>
+</div></section>
+
+<!-- 6. 이후 진행 -->
+<section id="next"><div class="wrap">
+  <span class="sec-no">06</span>
+  <h2>받은 데이터로, 이렇게 진행합니다</h2>
+  <p class="sec-sub">오늘 자료를 공유해주시면 VDVIA가 곧바로 착수합니다. 세부 일정은 함께 맞추되, 진행 순서는 다음과 같습니다.</p>
+  <div class="steps">
+    <div class="step-card"><div class="sn">1</div><div class="st">전체 프로세스 확정</div><div class="sd">받은 6가지로 검수 룰 · 콘텐츠 유형 · 캘린더 골격을 큰 틀로 확정</div></div>
+    <div class="step-card"><div class="sn">2</div><div class="st">AI 학습 · 세팅</div><div class="sd">브랜드 · 감도 · 법규를 학습시키고 사전 검수 기준 구축</div></div>
+    <div class="step-card"><div class="sn">3</div><div class="st">1차 콘텐츠 제작</div><div class="sd">샘플을 만들어 함께 보고 톤 · 방향을 한 번 맞춤</div></div>
+    <div class="step-card"><div class="sn">4</div><div class="st">검수 · 발행 자동화</div><div class="sd">승인 → 자동 발행 연결, 계정별 주 2건 정기 운영 시작</div></div>
+  </div>
+  <div class="flow-note" style="margin:24px 0 0">우정님은 <b>자료 한 번 공유</b> 후 <b>최종 승인</b>만 — 이후 전 과정은 VDVIA가 맡아 진행합니다.</div>
 </div></section>
 
 <footer><div class="wrap">
