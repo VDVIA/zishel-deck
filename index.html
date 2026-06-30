@@ -140,8 +140,22 @@
   footer{padding:44px 0 66px;color:var(--faint);font-size:13.5px}
   footer .conf{display:inline-block;background:var(--red-soft);color:var(--red);font-weight:700;padding:4px 12px;border-radius:7px;font-size:12.5px;margin-bottom:12px}
 
+  .bucket-h{font-size:21px;font-weight:700;margin:0 0 18px;padding-bottom:11px;border-bottom:2px solid var(--yellow);display:flex;align-items:center;gap:10px}
+  .bucket-h .bn{flex:none;width:28px;height:28px;border-radius:7px;background:var(--ink);color:var(--yellow);font-family:var(--serif);font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .req{display:grid;gap:13px;margin-bottom:42px}
+  .req .row{display:flex;gap:15px;background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:17px 20px}
+  .req .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--yellow);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center}
+  .req .t{font-weight:600;font-size:16.5px}
+  .req .d{color:var(--muted);font-size:14.5px;margin-top:3px;line-height:1.5}
+  .prep{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .pcard{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:20px 22px}
+  .pcard h4{margin:0 0 11px;font-size:16.5px;font-weight:700;display:flex;align-items:center;gap:9px}
+  .pcard h4 .ab{flex:none;width:26px;height:26px;border-radius:7px;background:var(--yellow);color:var(--ink);font-family:var(--serif);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .pcard ul{margin:0;padding-left:18px;color:var(--muted);font-size:14.8px;line-height:1.55}
+  .pcard li{margin:7px 0}
+  .pcard li b{color:var(--ink);font-weight:600}
   @media(max-width:760px){
-    .g3,.g2,.agenda ul{grid-template-columns:1fr}
+    .g3,.g2,.agenda ul,.prep{grid-template-columns:1fr}
     header.hero h1{font-size:33px}
     h2{font-size:25px}
     nav .links{display:none}
@@ -294,91 +308,61 @@
 <!-- 4. 필요 데이터 -->
 <section id="data"><div class="wrap">
   <span class="sec-no">04</span>
-  <h2>VDVIA가 요청하는 데이터</h2>
-  <p class="sec-sub">자동화 품질은 학습 데이터 품질에서 나옵니다. 아래를 한 번 받으면 시스템에 세팅하고, 이후 우정님 업무는 크게 줄어듭니다. <b>P0</b>은 착수 필수입니다.</p>
+  <h2>필요 데이터 — 우정님은 6가지만</h2>
+  <p class="sec-sub">우정님이 새로 만드실 건 거의 없습니다. 대부분 이미 보유하신 자료를 한 번 공유해주시면 — 학습 · 룰 세팅부터 콘텐츠 생성 · 발행 자동화까지 <b>나머지는 VDVIA가 맡습니다</b>. (발행은 계정별 주 2건 기준)</p>
 
-  <div class="gate">
-    <h3>🔑 가장 먼저 정해야 할 4가지 — 이게 안 정해지면 나머지가 묶입니다</h3>
-    <ol>
-      <li>핵심 5개국 확정 + 선정 근거<small>법규 · 캘린더 · 언어 · 페르소나 · 파트너 매핑이 전부 여기에 달려 있습니다.</small></li>
-      <li>운영 단위 — 계정 · 브랜드별(TESS / ZISHEL XOMAGE / 그룹) 주당 게시 건수<small>생성량 · 계정 라우팅이 2배로 갈리는 분기값입니다.</small></li>
-      <li>메타 계정 구조 · 권한 정보<small>발행 자동화 연동 설계의 기반입니다. 받는 즉시 VDVIA가 연동 방식을 확인합니다.</small></li>
-      <li>검수 책임 합의서 (OK = 게시 승인 = 법적 책임 지쉘그룹 귀속)<small>다국가 · 다국어 자동 발행을 켜기 위한 법적 선결 조건입니다.</small></li>
-    </ol>
+  <h3 class="bucket-h"><span class="bn">①</span>우정님께 선제 요청 — 6가지</h3>
+  <div class="req">
+    <div class="row"><span class="num">1</span><div><div class="t">주력 국가 + 올해 공식 이벤트</div><div class="d">중요한 날(예: 크리스마스)에 콘텐츠를 올리고 싶은 국가들 + 브랜드별 올해 공지 필요 이벤트(부스 행사 등) 선공유</div></div></div>
+    <div class="row"><span class="num">2</span><div><div class="t">메타 계정 정보</div><div class="d">발행 자동화 연동의 기반 — 연동 방식은 받은 뒤 VDVIA가 확인</div></div></div>
+    <div class="row"><span class="num">3</span><div><div class="t">브랜드 제품별 마케팅 덱</div><div class="d">제품명 · 슬로건 · 핵심 소구점 · 세부 원료 · 효능 · 타깃 페르소나 · 표현 금기/필수표기 · 인증/클레임 · 브랜드 스토리 · 해시태그 · 멘션 세트</div></div></div>
+    <div class="row"><span class="num">4</span><div><div class="t">검수 체크리스트 + 반려 사례</div><div class="d">기존 활용하시던 공정위 · 메디컬 · 금지어 가이드 기반 — AI 사전 검수 룰의 시드</div></div></div>
+    <div class="row"><span class="num">5</span><div><div class="t">원본 사진 · 영상 + 전 SKU 누끼</div><div class="d">콘텐츠 제작 원재료 (원본만 주시면 누끼는 VDVIA가 제작 가능)</div></div></div>
+    <div class="row"><span class="num">6</span><div><div class="t">기존 영업팀 기획서 양식</div><div class="d">AI 사전 검수 · 자동 이관의 입력 스키마</div></div></div>
   </div>
 
-  <div style="height:24px"></div>
-
-  <div class="cat">
-    <div class="cat-head"><span class="n">①</span><h3>브랜드 · 메시지</h3></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">브랜드 마스터 팩트시트</div><div class="it-why">AI가 모든 콘텐츠에서 참조하는 정본 — 사명 · 카테고리 오류 차단</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">슬로건 · 핵심 메시지 키 세트</div><div class="it-why">후킹 카피의 원천. 매주 같은 메시지로 수렴</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">5개국별 포지셔닝 · 타깃 페르소나</div><div class="it-why">국가별 콘텐츠 변주의 기준</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">브랜드 보이스 (인스타 vs 링크드인 톤)</div><div class="it-why">모든 카피의 문체 통제 — 검수 반려율을 낮춤</div></div></div>
-    <details><summary>그 외 항목 (P1 · P2) 보기</summary>
-      <div class="item"><span class="badge p1">P1</span><div><div class="it-name">경쟁사 맵 / 표현 금기 · 필수표기 룰 / 인증 · 클레임 / 브랜드 스토리</div></div></div>
-      <div class="item"><span class="badge p2">P2</span><div><div class="it-name">공식 해시태그 · 멘션 세트 / 영문 · 현지어 용어사전</div></div></div>
-    </details>
-  </div>
-
-  <div class="cat">
-    <div class="cat-head"><span class="n">②</span><h3>제품 · 법무 · 컴플라이언스</h3></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">SKU 효능 · USP 카드 <em>(효능 옆 '근거 있음 / 없음' 표기)</em></div><div class="it-why">없는 효능 생성 · 의료법 위반을 사실 단위에서 차단</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">공정위 · 메디컬 · 금지어 가이드라인 템플릿</div><div class="it-why">= AI 사전 검수 룰. 위반 카피를 생성 단계에서 자동 플래그</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">5개국 규제기관 · 근거법령 매핑</div><div class="it-why">'이 게시물은 X국 → X국 룰 적용' 라우팅의 키</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">클레임 실증 근거 패키지</div><div class="it-why">표시광고 실증 — 근거 없는 효능은 생성 자체를 금지</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">검수 책임 합의서</div><div class="it-why">자동 발행을 켜기 위한 법적 전제</div></div></div>
-    <details><summary>그 외 항목 (P1 · P2) 보기</summary>
-      <div class="item"><span class="badge p1">P1</span><div><div class="it-name">INCI 성분 · 국가별 제한 / 필수표기 · 디스클로저 / 비교광고 · 상표 / 민감일 / 검수 체크리스트 · 반려사례</div></div></div>
-      <div class="item"><span class="badge p2">P2</span><div><div class="it-name">플랫폼(인스타 · 링크드인) 정책 / 상표 ®™ 표기</div></div></div>
-    </details>
-  </div>
-
-  <div class="cat">
-    <div class="cat-head"><span class="n">③</span><h3>시각 · 디자인 자산</h3></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">합격 / 불합격 레퍼런스 게시물 (인스타 · 링크드인, 사유 포함)</div><div class="it-why">톤앤매너 학습의 앵커. 합격선만으론 경계를 못 그어 불합격 셋도 필요</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">원본 사진 · 영상 + 전 SKU 누끼(투명배경)</div><div class="it-why">실제 게시물 합성 원재료 (Google Drive)</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">BI 1부 (로고 벡터 · 컬러 HEX · 폰트 + 라이선스)</div><div class="it-why">시각 일관성 — PNG 한 장으로는 불가</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">금지 비주얼 블랙리스트</div><div class="it-why">검수 반려의 주요 원인을 시각 단계에서 차단</div></div></div>
-    <div class="item"><span class="badge p1">P1</span><div><div class="it-name">영상 편집 기준 · 가이드라인 + 원본 소스 공유 방식</div><div class="it-why">우정님이 명문화 — 영상 편집 · variation 자동화의 전제</div></div></div>
-    <details><summary>그 외 항목 (P1 · P2) 보기</summary>
-      <div class="item"><span class="badge p1">P1</span><div><div class="it-name">유형별 디자인 템플릿 / 촬영 · 편집 가이드 / 에셋 라이선스 · 초상권</div></div></div>
-      <div class="item"><span class="badge p2">P2</span><div><div class="it-name">이모지 · 그래픽 · 아이콘 세트</div></div></div>
-    </details>
-  </div>
-
-  <div class="cat">
-    <div class="cat-head"><span class="n">④</span><h3>이벤트 · 캘린더</h3></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">핵심 5개국 + 근거</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">글로벌 행사 · 심포지엄 · 전시 일정</div><div class="it-why">"스피드" 핵심 소스 — 행사 직전 타이밍 발행</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">5개국 공휴일 · 기념일 12개월 (+ 활용여부 · 톤)</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">국가 우선순위 + 캘린더 색상</div></div></div>
-    <details><summary>그 외 항목 (P1) 보기</summary>
-      <div class="item"><span class="badge p1">P1</span><div><div class="it-name">자체 캠페인 일정 / 시즌(11.11 · 블프) 정책 / 타임존 · 게시 최적시각 / 언어 정책</div></div></div>
-    </details>
-  </div>
-
-  <div class="cat">
-    <div class="cat-head"><span class="n">⑤</span><h3>콘텐츠 운영 규칙</h3></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">콘텐츠 유형 4~5종 확정 + 목적 / 메시지</div><div class="it-why">AI가 매주 무엇을 만들지 결정하는 유형 사전</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">영업팀 기획서 양식 · 필드 정의</div><div class="it-why">AI 사전 검수 · 자동 이관의 입력 스키마</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">게시 언어 정책 (영어 / 현지어 / 병기)</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">캡션 작성 규칙 + 합격 예시 5~10건</div></div></div>
-    <details><summary>그 외 항목 (P1) 보기</summary>
-      <div class="item"><span class="badge p1">P1</span><div><div class="it-name">유형 × 포맷 매핑 / 해시태그 정책 / CTA · 링크 / 주간 루틴 / 시각 규격</div></div></div>
-    </details>
-  </div>
-
-  <div class="cat">
-    <div class="cat-head"><span class="n">⑥</span><h3>계정 · 운영 · 자동화 권한</h3></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">운영 계정 전체 목록 (TESS · ZISHEL XOMAGE · 헤어팀 등)</div><div class="it-why">계정별 건수 = 생성량 · 라우팅 기준</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">메타 계정 구조 + Meta 비즈니스 관리자 자산 위임</div><div class="it-why">자동 발행 권한의 핵심</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">계정별 게시 권한 위임 (인스타 · 링크드인)</div></div></div>
-    <div class="item"><span class="badge p0">P0</span><div><div class="it-name">Google Drive 편집자 권한 + 'OK 신호' 규약</div><div class="it-why">검수 → 발행 자동 트리거</div></div></div>
-    <details><summary>그 외 항목 (P1 · P2) 보기</summary>
-      <div class="item"><span class="badge p1">P1</span><div><div class="it-name">Zapier 연동 방식 / 기존 툴(리퀘스트 · 캘린더) 구조 / 검수 SLA · 발행일정 / 담당자 연락체계</div></div></div>
-      <div class="item"><span class="badge p2">P2</span><div><div class="it-name">계정 운영 가드레일 (댓글 · DM 범위, 기존 운영 충돌)</div></div></div>
-    </details>
+  <h3 class="bucket-h"><span class="bn">②</span>VDVIA가 준비 — 받은 6개로 자체 제작 · 처리</h3>
+  <div class="prep">
+    <div class="pcard">
+      <h4><span class="ab">A</span>학습 · 검수 룰</h4>
+      <ul>
+        <li>마케팅 덱 · 검수 체크리스트 · 기획서 양식을 <b>AI가 학습/검수 가능한 형태로 구조화</b></li>
+        <li>공정위 · 메디컬 · 금지어 <b>AI 사전 검수 가이드라인 템플릿</b> 구축 (체크리스트 · 반려사례 + 법령 보강)</li>
+        <li>5개국 규제 · 필수표기 · 디스클로저 · 민감일 · 플랫폼 정책 <b>법규 리서치 보강</b></li>
+        <li>브랜드 <b>보이스 · 톤 가이드</b> — 마케팅 덱 + 기존 SNS 게시물에서 추출</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h4><span class="ab">B</span>콘텐츠 설계 · 생성</h4>
+      <ul>
+        <li><b>콘텐츠 유형 4~5종 확립</b></li>
+        <li>유형 × 포맷 매핑 · 캡션 규칙 · 해시태그 운용 규칙(받은 세트 기반) · CTA · 링크 · <b>주간 루틴(계정별 주 2건)</b> · 시각 규격 · 디자인 템플릿</li>
+        <li><b>감도 학습</b> — 기존 브랜드 SNS에서 합격 후보 선별</li>
+        <li>전 SKU <b>누끼 제작</b>, 이미지 · 영상 생성 · 편집</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h4><span class="ab">C</span>캘린더 · 스케줄</h4>
+      <ul>
+        <li>5개국 <b>공휴일 · 기념일 12개월 자동 수집</b>, 캘린더 색상 · 우선순위 · 타임존 · 게시 최적시각 · 게시 언어 정책 제안</li>
+        <li>받은 공식 이벤트를 캘린더에 <b>고정 슬롯</b>으로 편성</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h4><span class="ab">D</span>파이프라인 · 자동화</h4>
+      <ul>
+        <li>기획서 → AI 사전 검수 → 캘린더/폴더 <b>자동 이관</b> 흐름</li>
+        <li>Drive 폴더 구조 · <b>OK 신호 규약</b> 설계, 발행 자동화 연동(메타 정보 후 방식 확정)</li>
+        <li>기존 디자인 리퀘스트 · 캘린더 툴 통합 · 개선</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h4><span class="ab">E</span>운영 · 법무 문서</h4>
+      <ul>
+        <li><b>검수 책임 · 승인 합의서 초안</b> 작성</li>
+        <li>검수 SLA · 발행 일정 · 담당자 연락 체계 제안</li>
+      </ul>
+    </div>
   </div>
 </div></section>
 
