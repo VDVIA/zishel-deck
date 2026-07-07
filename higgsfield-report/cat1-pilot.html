@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>ZISHEL 제품컷 파일럿 — 폰트·구도 보정</title>
+<style>
+  :root{ --teal:#2fa99a; --teal-d:#1c7d72; --mint-l:#eef9f6; --ink:#1a2b29; --gray:#5c6b69; --line:#dfe8e6; --bg:#f6faf9; }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;}
+  header{background:linear-gradient(135deg,#eaf6f3,#bfe4db);padding:36px 24px;text-align:center;border-bottom:1px solid var(--line);}
+  header h1{font-family:Georgia,serif;font-size:24px;margin:0 0 6px;}
+  header .sub{color:var(--gray);font-size:13.5px;}
+  .wrap{max-width:1200px;margin:0 auto;padding:28px 20px 60px;}
+  h2{font-family:Georgia,serif;font-size:18px;margin:34px 0 6px;color:var(--teal-d);}
+  .lead{color:var(--gray);font-size:13.5px;margin:0 0 16px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  @media(max-width:800px){.grid4{grid-template-columns:repeat(2,1fr);}.grid3{grid-template-columns:repeat(1,1fr);}}
+  .cell img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;border:1px solid var(--line);cursor:zoom-in;
+    display:block;background:#fff;transition:transform .15s;}
+  .cell img:hover{transform:scale(1.03);}
+  .cell.ref img{border:2px solid var(--teal);}
+  .cell .cap{font-size:12px;text-align:center;margin-top:6px;color:var(--gray);}
+  .cell.ref .cap{color:var(--teal-d);font-weight:700;}
+  .cell .cap b{color:var(--ink);font-weight:700;}
+  #lightbox{position:fixed;inset:0;background:rgba(10,20,18,.9);display:none;align-items:center;justify-content:center;z-index:999;padding:30px;cursor:zoom-out;}
+  #lightbox.open{display:flex;}
+  #lightbox img{max-width:min(90vw,1000px);max-height:88vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+  #lightbox .lb-cap{position:absolute;top:20px;left:0;right:0;text-align:center;color:#e8f5f1;font-size:13px;}
+  #lightbox .lb-close{position:absolute;top:14px;right:20px;color:#e8f5f1;font-size:26px;cursor:pointer;width:38px;height:38px;
+    display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1);}
+  .foot{text-align:center;color:#9aa8a6;font-size:11.5px;padding:20px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>ZISHEL 쏘마지 제품컷 — 폰트·구도 보정 파일럿</h1>
+  <div class="sub">실제 게시물 3개 정밀 분석(폰트·볼드강조·배치) → 재설계 프롬프트로 8컷 생성 · 2026-07-07</div>
+</header>
+<div class="wrap">
+
+  <h2>실제 레퍼런스 3개</h2>
+  <p class="lead">이 3장에서 타이포 시스템을 뽑았다: 두꺼운·얇은 획 대비가 강한 세리프, 텍스트는 항상 검정(티파니색 아님), 문장 안 1~2단어만 볼드 강조.</p>
+  <div class="grid3">
+    <div class="cell ref"><img class="zoomable" src="img/cat1pilot/ref1_thumb.jpg" data-full="img/cat1pilot/ref1_full.jpg" data-cap="REF1 — 스플래시+헤드라인"><div class="cap">REF1 — 스플래시+헤드라인 원형</div></div>
+    <div class="cell ref"><img class="zoomable" src="img/cat1pilot/ref2_thumb.jpg" data-full="img/cat1pilot/ref2_full.jpg" data-cap="REF2 — 매크로+뷰파인더"><div class="cap">REF2 — 매크로+카메라뷰파인더 원형</div></div>
+    <div class="cell ref"><img class="zoomable" src="img/cat1pilot/ref3_thumb.jpg" data-full="img/cat1pilot/ref3_full.jpg" data-cap="REF3 — Who/When/How 버블"><div class="cap">REF3 — Who/When/How 버블콜아웃 원형</div></div>
+  </div>
+
+  <h2>힉스필드 재생성 8컷</h2>
+  <p class="lead">클릭하면 원본 해상도로 확대됩니다 (라벨 디테일까지 확인 가능).</p>
+  <div class="grid4">
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai1_thumb.jpg" data-full="img/cat1pilot/ai1_full.jpg"><div class="cap">AI-1 스플래시+볼드헤드라인<br><b>전체 볼드 — 정확</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai2_thumb.jpg" data-full="img/cat1pilot/ai2_full.jpg"><div class="cap">AI-2 매크로대칭+뷰파인더<br><b>텍스트 없음(신규구도)</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai3_thumb.jpg" data-full="img/cat1pilot/ai3_full.jpg"><div class="cap">AI-3 What/Why/How 버블<br><b>3곳 선택볼드 — 정확</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai4_thumb.jpg" data-full="img/cat1pilot/ai4_full.jpg"><div class="cap">AI-4 수중낙하<br><b>"see"/"feel"만 볼드 — 정확</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai5_thumb.jpg" data-full="img/cat1pilot/ai5_full.jpg"><div class="cap">AI-5 콜드체인 서리(신규)<br><b>"Peak potency"만 볼드 — 정확</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai6_thumb.jpg" data-full="img/cat1pilot/ai6_full.jpg"><div class="cap">AI-6 오버헤드 리플(신규)<br><b>"Transformative."만 볼드 — 정확</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai7_thumb.jpg" data-full="img/cat1pilot/ai7_full.jpg"><div class="cap">AI-7 갤러리 드라마틱섀도우(신규)<br><b>전체 볼드 — 정확</b></div></div>
+    <div class="cell"><img class="zoomable" src="img/cat1pilot/ai8_thumb.jpg" data-full="img/cat1pilot/ai8_full.jpg"><div class="cap">AI-8 듀오 비교컷(신규)<br><b>"Every skin goal."만 볼드 — 정확</b></div></div>
+  </div>
+
+</div>
+<div class="foot">VDVIA × ZISHEL XOMAGE · 파일럿 검토용 · noindex</div>
+
+<div id="lightbox">
+  <div class="lb-cap" id="lbCap"></div>
+  <div class="lb-close" id="lbClose">&times;</div>
+  <img id="lbImg" src="" alt="">
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+  document.querySelectorAll('img.zoomable').forEach(function(img){
+    img.addEventListener('click', function(){
+      lbImg.src = img.getAttribute('data-full') || img.src;
+      var cap = img.closest('.cell').querySelector('.cap');
+      lbCap.textContent = cap ? cap.textContent.replace(/\s+/g,' ').trim() : '';
+      lb.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', function(){lb.classList.remove('open');});
+  lb.addEventListener('click', function(e){ if(e.target===lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+})();
+</script>
+</body>
+</html>
