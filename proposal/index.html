@@ -24,7 +24,7 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.7;font-size:16.5px;
-    -webkit-font-smoothing:antialiased;}
+    -webkit-font-smoothing:antialiased;word-break:keep-all;}
 
   /* ---------- shared ---------- */
   .container{max-width:1280px;margin:0 auto;padding:0 48px;}
@@ -97,7 +97,8 @@
 
   /* ---------- 03 limits ---------- */
   .limit-wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:stretch;margin-bottom:30px;}
-  .gauge-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:44px 46px;}
+  .gauge-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:44px 46px;
+    display:flex;flex-direction:column;justify-content:center;}
   .gauge-card h4{font-size:19px;font-weight:700;margin-bottom:6px;}
   .gauge-card .src{font-size:13.5px;color:var(--gray-light);margin-bottom:38px;}
   .gauge{position:relative;height:64px;border-radius:12px;background:repeating-linear-gradient(135deg,#eef4f2 0 10px,#e4eeeb 10px 20px);
@@ -423,7 +424,7 @@
   </div>
 </section>
 
-<footer>VDVIA × ZISHEL GROUP &nbsp;·&nbsp; 본 제안서는 검토용 기밀 자료입니다 &nbsp;·&nbsp; noindex</footer>
+<footer>VDVIA × ZISHEL GROUP &nbsp;·&nbsp; 본 제안서는 검토용 기밀 자료입니다</footer>
 
 </body>
 </html>
