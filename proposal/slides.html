@@ -94,50 +94,41 @@
   .hint{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--teal-deep);
     background:var(--mint);border-radius:100px;padding:6px 15px;margin-bottom:26px;}
 
-  /* ---------- ENGINE flow ---------- */
-  .flow-wrap{display:grid;grid-template-columns:1fr 300px;gap:44px;align-items:center;}
-  .flow{position:relative;}
-  .flow-row{display:flex;align-items:stretch;gap:0;}
-  .node{flex:1;border-radius:14px;padding:20px 16px;text-align:center;position:relative;
-    display:flex;flex-direction:column;justify-content:center;min-height:104px;}
-  .node .nlbl{font-size:16px;font-weight:700;line-height:1.3;}
-  .node .nsub{font-size:12px;margin-top:6px;opacity:.85;line-height:1.4;}
+  /* ---------- ENGINE flow (L→R single lane) ---------- */
+  .node{border-radius:14px;padding:20px 14px;text-align:center;position:relative;
+    display:flex;flex-direction:column;justify-content:center;min-height:120px;}
+  .node .nlbl{font-size:16.5px;font-weight:700;line-height:1.3;}
+  .node .nsub{font-size:12.5px;margin-top:7px;opacity:.85;line-height:1.45;}
   .node.ai{background:var(--teal-dark);color:#eaf7f3;}
   .node.ai .nsub{color:#9fd6cb;}
   .node.human{background:#fff;border:2px solid var(--ink);color:var(--ink);}
   .node.human .nsub{color:var(--gray);}
   .node.plain{background:var(--white);border:1px solid var(--line);color:var(--ink);}
   .node.plain .nsub{color:var(--gray-light);}
-  .node .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);
-    background:var(--amber);color:#3a2e00;font-size:10.5px;font-weight:800;letter-spacing:.08em;
-    padding:3px 10px;border-radius:100px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.15);}
-  .harrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:22px;}
-
-  .inputs{display:flex;gap:16px;margin-bottom:14px;}
-  .inbox{flex:1;border:1.5px dashed var(--gray-light);border-radius:12px;padding:14px 18px;background:var(--mint-soft);}
-  .inbox .t{font-size:14.5px;font-weight:700;color:var(--ink);}
-  .inbox .s{font-size:12px;color:var(--gray);margin-top:3px;}
-  .down{display:flex;justify-content:center;color:var(--teal);font-size:20px;margin:2px 0;}
-  .learn{position:absolute;left:-8px;top:50%;transform:translate(-100%,-50%);width:150px;
-    background:var(--mint);border:1px solid var(--teal);border-radius:12px;padding:14px 16px;text-align:center;}
-  .learn .t{font-size:14px;font-weight:800;color:var(--teal-deep);}
-  .learn .s{font-size:11.5px;color:var(--gray);margin-top:4px;line-height:1.4;}
-  .learn::after{content:"→";position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:var(--teal);font-size:18px;}
-
-  .fb{margin-top:14px;display:flex;align-items:center;gap:10px;justify-content:flex-end;
-    font-size:12.5px;color:#c0503f;}
-  .fb .ln{width:200px;border-top:1.5px dashed #c0503f;height:1px;}
-
-  .legend{background:var(--mint-soft);border:1px solid var(--line);border-radius:16px;padding:28px 26px;}
-  .legend h4{font-size:16px;font-weight:800;margin-bottom:18px;color:var(--teal-ink);}
-  .legend .li{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;font-size:13.5px;line-height:1.5;}
-  .legend .sw{flex:0 0 18px;height:18px;border-radius:5px;margin-top:2px;}
-  .legend .sw.ai{background:var(--teal-dark);}
-  .legend .sw.human{background:#fff;border:2px solid var(--ink);}
-  .legend .li b{display:block;color:var(--ink);margin-bottom:2px;}
-  .legend .li span{color:var(--gray);}
-  .legend .pw{margin-top:6px;padding-top:16px;border-top:1px dashed var(--line);font-size:13px;color:var(--gray);}
-  .legend .pw b{color:var(--teal-deep);}
+  .node .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    background:var(--amber);color:#3a2e00;font-size:11px;font-weight:800;letter-spacing:.08em;
+    padding:3px 11px;border-radius:100px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+  .flow2{display:flex;align-items:stretch;position:relative;margin:14px 0 74px;}
+  .flow2 .node{flex:1;}
+  .fcol{flex:1.05;display:flex;flex-direction:column;gap:10px;justify-content:center;}
+  .inbox2{border:1.5px dashed var(--gray-light);border-radius:12px;padding:12px 13px;background:var(--mint-soft);text-align:center;}
+  .inbox2 .t{font-size:13.5px;font-weight:700;}
+  .inbox2 .s{font-size:11px;color:var(--gray);margin-top:2px;}
+  .harrow{flex:0 0 36px;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:22px;}
+  .fb2{position:absolute;top:calc(100% + 12px);height:34px;border:1.6px dashed #c0503f;border-top:none;
+    border-radius:0 0 14px 14px;}
+  .fb2::before{content:"▲";position:absolute;left:-6px;top:-13px;color:#c0503f;font-size:11px;}
+  .fb2 span{position:absolute;top:10px;left:50%;transform:translateX(-50%);font-size:12.5px;color:#c0503f;
+    background:var(--white);padding:0 12px;white-space:nowrap;}
+  .legend2{display:flex;gap:44px;background:var(--mint-soft);border:1px solid var(--line);border-radius:14px;
+    padding:20px 30px;}
+  .legend2 .li{display:flex;gap:12px;align-items:center;font-size:14px;}
+  .legend2 .sw{flex:0 0 18px;height:18px;border-radius:5px;}
+  .legend2 .sw.ai{background:var(--teal-dark);}
+  .legend2 .sw.human{background:#fff;border:2px solid var(--ink);}
+  .legend2 .fbline{flex:0 0 26px;height:0;border-top:2px dashed #c0503f;}
+  .legend2 b{color:var(--ink);margin-right:6px;}
+  .legend2 span.d{color:var(--gray);}
 
   /* ---------- limits gauge ---------- */
   .limit-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;margin-bottom:28px;}
@@ -209,10 +200,15 @@
   .sum .k{font-size:13px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:14px;}
   .sum .v{font-size:19px;line-height:1.55;color:#eef9f6;}
   .sum .v b{color:#8fe0d2;}
-  .closing{font-family:var(--serif);font-size:clamp(20px,2.2vw,30px);line-height:1.6;color:#dff3ee;max-width:1000px;}
+  .closing{font-family:var(--serif);font-size:clamp(18px,1.9vw,27px);line-height:1.65;color:#dff3ee;max-width:none;white-space:nowrap;}
   .closing b{color:#8fe0d2;font-weight:500;}
 
-  @media(max-width:1200px){ .slide{padding:56px 48px 90px;} .types{grid-template-columns:repeat(4,1fr);} .flow-wrap{grid-template-columns:1fr;} }
+  @media(max-width:1200px){ .slide{padding:56px 48px 90px;} .types{grid-template-columns:repeat(4,1fr);} .flow2{flex-wrap:wrap;} .closing{white-space:normal;} }
+
+  /* ---------- cursor glow ---------- */
+  #cursorGlow{position:fixed;left:0;top:0;width:190px;height:190px;border-radius:50%;pointer-events:none;z-index:9999;
+    background:radial-gradient(circle,rgba(143,224,210,.42) 0%,rgba(47,169,154,.16) 42%,rgba(47,169,154,0) 70%);
+    transform:translate(-50%,-50%);opacity:0;transition:opacity .25s;}
 </style>
 </head>
 <body>
@@ -292,38 +288,28 @@
     <div class="inner">
       <div class="eyebrow">02 &nbsp;ENGINE</div>
       <h2>VDVIA SNS AI 마케팅 엔진 — 전체 운영 프로세스</h2>
-      <p class="lead">기획부터 발행까지 하나의 파이프라인으로 흐릅니다. <b class="tealtxt">진한 노드가 AI 엔진이 힘을 쓰는 지점</b>이며, 사람(우정님)은 <b>최종 승인 한 지점</b>에만 개입합니다.</p>
-      <div class="flow-wrap">
-        <div class="flow">
-          <div class="inputs">
-            <div class="inbox"><div class="t">영업팀 기획서</div><div class="s">이벤트 · 행사 기반</div></div>
-            <div class="inbox"><div class="t">루틴 · 5개 계정 캘린더</div><div class="s">계정별 주 2건 · 유형 로테이션</div></div>
-          </div>
-          <div class="down">↓</div>
-          <div class="flow-row" style="margin-bottom:12px;">
-            <div class="node ai"><span class="badge">AI 엔진</span><div class="nlbl">① AI 사전 검수</div><div class="nsub">공정위 · 메디컬 · 금지어 자동 필터</div></div>
-            <div class="harrow">→</div>
-            <div class="node ai"><span class="badge">AI 엔진 · 학습</span><div class="nlbl">콘텐츠 제작 · 생성</div><div class="nsub">AI 학습(브랜드 · 감도 · 법규) 기반 초안 생성</div></div>
-            <div class="harrow">→</div>
-            <div class="node plain"><div class="nlbl">Drive · 캘린더 적재</div><div class="nsub">결과물 + 발행 스케줄</div></div>
-          </div>
-          <div class="down">↓</div>
-          <div class="flow-row">
-            <div class="node human"><div class="nlbl">② 우정님 최종 승인</div><div class="nsub">법적 책임 · 발행 결정</div></div>
-            <div class="harrow">→</div>
-            <div class="node ai"><span class="badge">AI 엔진</span><div class="nlbl">콘텐츠 발행</div><div class="nsub">스케줄 기반 자동 게시</div></div>
-            <div class="harrow" style="opacity:0;">→</div>
-            <div style="flex:1;"></div>
-          </div>
-          <div class="fb"><span>반려 · 수정 시 콘텐츠 제작 단계로 회귀</span><span class="ln"></span><span>↺</span></div>
+      <p class="lead">기획부터 발행까지, 왼쪽에서 오른쪽으로 흐르는 하나의 파이프라인입니다. <b class="tealtxt">진한 노드가 AI 엔진이 힘을 쓰는 지점</b>이며, 사람(우정님)은 <b>최종 승인 한 지점</b>에만 개입합니다.</p>
+      <div class="flow2" id="flow2">
+        <div class="fcol">
+          <div class="inbox2"><div class="t">영업팀 기획서</div><div class="s">이벤트 · 행사 기반</div></div>
+          <div class="inbox2"><div class="t">루틴 · 5개 계정 캘린더</div><div class="s">계정별 주 2건 · 유형 로테이션</div></div>
         </div>
-
-        <div class="legend">
-          <h4>AI 엔진 vs 사람</h4>
-          <div class="li"><span class="sw ai"></span><div><b>AI 엔진이 힘을 쓰는 곳</b><span>사전 검수 · 학습 · 제작 · 발행 — 반복 리소스를 흡수</span></div></div>
-          <div class="li"><span class="sw human"></span><div><b>사람이 개입하는 곳</b><span>최종 승인 한 지점 — 법적 책임과 발행 결정만</span></div></div>
-          <div class="pw">엔진이 흐름의 대부분을 감당하지만, <b>감도·규제 검수</b>는 여전히 전담 디자이너의 몫입니다. → 다음 장</div>
-        </div>
+        <div class="harrow">→</div>
+        <div class="node ai"><span class="badge">AI 엔진</span><div class="nlbl">① AI 사전 검수</div><div class="nsub">공정위 · 메디컬 · 금지어<br>자동 필터</div></div>
+        <div class="harrow">→</div>
+        <div class="node ai" id="nodeMake"><span class="badge">AI 엔진 · 학습</span><div class="nlbl">콘텐츠 제작 · 생성</div><div class="nsub">AI 학습(브랜드 · 감도 · 법규)<br>기반 초안 생성</div></div>
+        <div class="harrow">→</div>
+        <div class="node plain"><div class="nlbl">Drive · 캘린더 적재</div><div class="nsub">결과물 + 발행 스케줄</div></div>
+        <div class="harrow">→</div>
+        <div class="node human" id="nodeApprove"><div class="nlbl">② 우정님 최종 승인</div><div class="nsub">법적 책임 · 발행 결정</div></div>
+        <div class="harrow">→</div>
+        <div class="node ai"><span class="badge">AI 엔진</span><div class="nlbl">콘텐츠 발행</div><div class="nsub">스케줄 기반 자동 게시</div></div>
+        <div class="fb2" id="fb2"><span>반려 · 수정 시 제작 단계로 회귀</span></div>
+      </div>
+      <div class="legend2">
+        <div class="li"><span class="sw ai"></span><div><b>AI 엔진 자동화</b><span class="d">사전 검수 · 학습 · 제작 · 발행 — 반복 리소스를 흡수</span></div></div>
+        <div class="li"><span class="sw human"></span><div><b>사람 개입</b><span class="d">최종 승인 한 지점 — 법적 책임과 발행 결정</span></div></div>
+        <div class="li"><span class="fbline"></span><div><b>반려 · 수정</b><span class="d">승인 반려 시 제작 단계로 회귀</span></div></div>
       </div>
     </div>
   </section>
@@ -348,10 +334,9 @@
         <div class="advice">
           <div class="adv"><div class="who">업계 전문가 자문</div><p>영상 콘텐츠는 자동화를 적용해도 <b>1건당 최소 3시간</b>의 사람 리소스가 여전히 필요합니다.</p></div>
           <div class="adv"><div class="who">업계 전문가 자문</div><p>이미지도 초안까지만 AI가 담당하며, <b>최종 감도 검수와 보정은 사람이 수행</b>해야 합니다.</p></div>
-          <div class="adv"><div class="who">VDVIA 내부 테스트</div><p>의료·더마 영역은 <b>규제 검수가 빠진 자동 발행이 불가능</b>합니다.</p></div>
+          <div class="adv"><div class="who">VDVIA 내부 테스트</div><p>콘텐츠 유형별 대량 생성 검증 결과, <b>자동화로 도달 가능한 완성도는 60~70% 수준</b>으로 파악됐습니다.</p></div>
         </div>
       </div>
-      <div class="limit-claim">AI 자동화의 가치는 사람을 없애는 것이 아니라 <b>사람의 시간을 초안 제작에서 감도 · 규제 검수로 옮기는 것</b>입니다.</div>
     </div>
   </section>
 
@@ -459,6 +444,25 @@
     // brandmark contrast on dark slides
     mark.style.color = slides[cur].classList.contains('dark') ? 'rgba(255,255,255,.45)' : '';
   }
+  // cursor glow
+  var glow = document.createElement('div'); glow.id='cursorGlow'; document.body.appendChild(glow);
+  document.addEventListener('mousemove',function(e){
+    glow.style.left=e.clientX+'px'; glow.style.top=e.clientY+'px'; glow.style.opacity='1';
+  });
+  document.addEventListener('mouseleave',function(){ glow.style.opacity='0'; });
+
+  // feedback bracket position (승인 → 제작)
+  function drawFb(){
+    var fb=document.getElementById('fb2'), wrap=document.getElementById('flow2');
+    var mk=document.getElementById('nodeMake'), ap=document.getElementById('nodeApprove');
+    if(!fb||!wrap||!mk||!ap) return;
+    var w=wrap.getBoundingClientRect(), m=mk.getBoundingClientRect(), a=ap.getBoundingClientRect();
+    var x1=m.left+m.width/2-w.left, x2=a.left+a.width/2-w.left;
+    fb.style.left=x1+'px'; fb.style.width=(x2-x1)+'px';
+  }
+  window.addEventListener('resize',drawFb);
+  setTimeout(drawFb,50);
+
   document.getElementById('next').addEventListener('click',function(){go(cur+1);});
   document.getElementById('prev').addEventListener('click',function(){go(cur-1);});
   document.addEventListener('keydown',function(e){
